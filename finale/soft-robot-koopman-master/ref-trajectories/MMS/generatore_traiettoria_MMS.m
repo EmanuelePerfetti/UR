@@ -10,18 +10,18 @@ name = 'marco quando abbiamo finito ti offro un pranzo da bonelli';
 
 T = 90;
 
-% t = linspace(0,90,200);
-% f1 = 2*10^(-2);
-% a1 = 2*10^(-2);
-% y(:,1) = a1*(1-cos(f1*t));
-% y(:,2) = a1*f1*sin(f1*t);
-
 t = linspace(0,90,200);
-y = [];
-for i = 1:length(t)
-    y(i,1) = 0.01;
-    y(i,2) = 0;
-end
+f1 = 2*10^(-2);
+a1 = 2*10^(-2);
+y(:,1) = a1*(1-cos(f1*t));
+y(:,2) = a1*f1*sin(f1*t);
+
+% t = linspace(0,90,200);
+% y = [];
+% for i = 1:length(t)
+%     y(i,1) = 0.01;
+%     y(i,2) = 0;
+% end
 
 % y(:,1) = t/100;
 % y(:,2) = y(:,1)/5;
