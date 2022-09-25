@@ -1,5 +1,7 @@
 % example_KMPC
 
+load('sim_ref_ellisse_MMS')
+
 x_kp1 = sim.Y;
 u_kp1 = sim.U;
 
@@ -27,9 +29,9 @@ plot(xHistory(:,1),'r','LineWidth',1.5)
 hold on
 plot(sim.Y(:,1),'g','LineWidth',1.5)
 plot(sim.R(:,1),'m','LineWidth',1.5)
-title('MSD position')
-xlabel('simulation step')
-ylabel('position [m]')
+title('MSD Position')
+xlabel('Simulation Step')
+ylabel('Position [m]')
 grid on
 legend('Euler','Koopman','Ref')
 
@@ -38,24 +40,24 @@ plot(xHistory(:,2),'b','LineWidth',1.5)
 hold on
 plot(sim.Y(:,2),'g','LineWidth',1.5)
 plot(sim.R(:,2),'m','LineWidth',1.5)
-title('MSD velocity')
-xlabel('simulation step')
-ylabel('velocity [m/s]')
+title('MSD Velocity')
+xlabel('Simulation Step')
+ylabel('Velocity [m/s]')
 grid on
 legend('Euler','Koopman','Ref')
 
 figure
 plot(err_pos_1_euler,'r','LineWidth',1.5)
-title('MSD position Euler error')
-xlabel('simulation step')
-ylabel('error [m]')
+title('MSD Position Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [m]')
 grid on
 
 figure
 plot(err_vel_1_euler,'r','LineWidth',1.5)
-title('MSD velocity Euler error')
-xlabel('simulation step')
-ylabel('error [m/s]')
+title('MSD Velocity Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [m/s]')
 grid on
 
 %%
@@ -66,27 +68,27 @@ scatter(sim.Y(:,1),sim.Y(:,2),'m','*','LineWidth',0.5)
 scatter(sim.R(:,1),sim.R(:,2),'b','o','LineWidth',0.5)
 legend('Euler','Koopman','Reference')
 grid on
-title('MSD scatter plot')
-xlabel('MSD position')
-ylabel('MSD velocity')
+title('MSD Scatter Plot')
+xlabel('MSD Position')
+ylabel('MSD Velocity')
 
 figure
 plot(err_pos_1_koopman,'r','LineWidth',1.5)
-title('MSD position Koopman error')
-xlabel('simulation step')
-ylabel('error [m]')
+title('MSD Position Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [m]')
 grid on
 
 figure
 plot(err_vel_1_koopman,'r','LineWidth',1.5)
-title('MSD velocity Koopman error')
-xlabel('simulation step')
-ylabel('error [m/s]')
+title('MSD Velocity Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [m/s]')
 grid on
 
 figure
 plot(sim.U(:,1),'r','LineWidth',1.5)
 title('MSD inut')
-xlabel('simulation step')
-ylabel('Forc [N]')
+xlabel('Simulation Step')
+ylabel('Force [N]')
 

@@ -1,5 +1,7 @@
 % example_KMPC
 
+load('sim_ref_ellisse_2R')
+
 x_kp1 = sim.Y;
 u_kp1 = sim.U;
 
@@ -32,9 +34,9 @@ plot(xHistory(:,1),'r','LineWidth',1.5)
 hold on
 plot(sim.Y(:,1),'g','LineWidth',1.5)
 plot(sim.R(:,1),'m','LineWidth',1.5)
-title('2R first joint position')
-xlabel('simulation step')
-ylabel('position [rad]')
+title('2R First Joint Position')
+xlabel('Simulation Step')
+ylabel('Position [rad]')
 grid on
 legend('Euler','Koopman','Ref')
 
@@ -43,9 +45,9 @@ plot(xHistory(:,2),'b','LineWidth',1.5)
 hold on
 plot(sim.Y(:,2),'g','LineWidth',1.5)
 plot(sim.R(:,2),'m','LineWidth',1.5)
-title('2R second joint position')
-xlabel('simulation step')
-ylabel('position [rad]')
+title('2R Second Joint Position')
+xlabel('Simulation Step')
+ylabel('Position [rad]')
 grid on
 legend('Euler','Koopman','Ref')
 
@@ -54,9 +56,9 @@ plot(xHistory(:,3),'r','LineWidth',1.5)
 hold on
 plot(sim.Y(:,3),'g','LineWidth',1.5)
 plot(sim.R(:,3),'m','LineWidth',1.5)
-title('2R first joint velocity')
-xlabel('simulation step')
-ylabel('velocity [rad/s]')
+title('2R First Joint Velocity')
+xlabel('Simulation Step')
+ylabel('Velocity [rad/s]')
 grid on
 legend('Euler','Koopman','Ref')
 
@@ -65,38 +67,38 @@ plot(xHistory(:,4),'b','LineWidth',1.5)
 hold on
 plot(sim.Y(:,4),'g','LineWidth',1.5)
 plot(sim.R(:,4),'m','LineWidth',1.5)
-title('2R second joint velocity')
-xlabel('simulation step')
-ylabel('velocity [rad/s]')
+title('2R Second Joint Velocity')
+xlabel('Simulation Step')
+ylabel('Velocity [rad/s]')
 grid on
 legend('Euler','Koopman','Ref')
 
 figure
 plot(err_pos_1_euler,'r','LineWidth',1.5)
-title('2R first joint position Euler error')
-xlabel('simulation step')
-ylabel('error [rad]')
+title('2R First Joint Position Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [rad]')
 grid on
 
 figure
 plot(err_pos_2_euler,'b','LineWidth',1.5)
-title('2R second joint position Euler error')
-xlabel('simulation step')
-ylabel('error [rad]')
+title('2R Second Joint Position Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [rad]')
 grid on
 
 figure
 plot(err_vel_1_euler,'r','LineWidth',1.5)
-title('2R first joint velocity Euler error')
-xlabel('simulation step')
-ylabel('error [rad/s]')
+title('2R First Joint Velocity Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [rad/s]')
 grid on
 
 figure
 plot(err_vel_2_euler,'b','LineWidth',1.5)
-title('2R second joint velocity Euler error')
-xlabel('simulation step')
-ylabel('error [rad/s]')
+title('2R Second Joint Velocity Euler Error')
+xlabel('Simulation Step')
+ylabel('Error [rad/s]')
 grid on
 
 %%
@@ -107,9 +109,9 @@ scatter(sim.Y(:,1),sim.Y(:,2),'m','*','LineWidth',0.5)
 scatter(sim.R(:,1),sim.R(:,2),'b','o','LineWidth',0.5)
 legend('Euler','Koopman','Reference')
 grid on
-title('2R joints position scatter plot')
-xlabel('first joint position')
-ylabel('second joint position')
+title('2R Joints Position Scatter Plot')
+xlabel('First Joint Position')
+ylabel('Second Joint Position')
 
 figure
 scatter(xHistory(:,3),xHistory(:,4),'g','^','LineWidth',0.5)
@@ -118,36 +120,36 @@ scatter(sim.Y(:,3),sim.Y(:,4),'m','*','LineWidth',0.5)
 scatter(sim.R(:,3),sim.R(:,4),'b','o','LineWidth',0.5)
 legend('Euler','Koopman','Reference')
 grid on
-title('2R joints velocity scatter plot')
-xlabel('first joint velocity')
-ylabel('second joint velocity')
+title('2R Joints Velocity Scatter Plot')
+xlabel('First Joint Velocity')
+ylabel('Second Joint Velocity')
 
 figure
 plot(err_pos_1_koopman,'r','LineWidth',1.5)
-title('2R first joint position Koopman error')
-xlabel('simulation step')
-ylabel('error [rad]')
+title('2R First Joint Position Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [rad]')
 grid on
 
 figure
 plot(err_pos_2_koopman,'b','LineWidth',1.5)
-title('2R second joint position Koopman error')
-xlabel('simulation step')
-ylabel('error [rad]')
+title('2R Second Joint Position Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [rad]')
 grid on
 
 figure
 plot(err_vel_1_koopman,'r','LineWidth',1.5)
-title('2R first joint velocity Koopman error')
-xlabel('simulation step')
-ylabel('error [rad/s]')
+title('2R First Joint Velocity Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [rad/s]')
 grid on
 
 figure
 plot(err_vel_2_koopman,'b','LineWidth',1.5)
-title('2R second joint velocity Koopman error')
-xlabel('simulation step')
-ylabel('error [rad/s]')
+title('2R Second Joint Velocity Koopman Error')
+xlabel('Simulation Step')
+ylabel('Error [rad/s]')
 grid on
 
 figure
@@ -155,7 +157,7 @@ plot(sim.U(:,1),'r','LineWidth',1.5)
 hold on
 plot(sim.U(:,2),'b','LineWidth',1.5)
 legend('U1','U2')
-title('2R torque')
-xlabel('simulation step')
-ylabel('torque [Nm]')
+title('2R Torque')
+xlabel('Simulation Step')
+ylabel('Torque [Nm]')
 

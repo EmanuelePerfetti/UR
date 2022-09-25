@@ -1,5 +1,7 @@
 % example_KMPC
 
+load('sim_ref_ellisse_VDP')
+
 x_kp1 = sim.Y;
 u_kp1 = sim.U;
 
@@ -27,9 +29,9 @@ plot(xHistory(:,1),'r','LineWidth',1.5)
 hold on
 plot(sim.Y(:,1),'g','LineWidth',1.5)
 plot(sim.R(:,1),'m','LineWidth',1.5)
-title('VDP position')
+title('VDP Position')
 xlabel('Simulation Step')
-ylabel('position [m]')
+ylabel('Position [m]')
 grid on
 legend('Euler','Koopman','Ref')
 
@@ -38,24 +40,24 @@ plot(xHistory(:,2),'b','LineWidth',1.5)
 hold on
 plot(sim.Y(:,2),'g','LineWidth',1.5)
 plot(sim.R(:,2),'m','LineWidth',1.5)
-title('VDP velocity')
+title('VDP Velocity')
 xlabel('Simulation Step')
-ylabel('velocity [m/s]')
+ylabel('Velocity [m/s]')
 grid on
 legend('Euler','Koopman','Ref')
 
 figure
 plot(err_pos_1_euler,'r','LineWidth',1.5)
-title('VDP position Euler error')
+title('VDP Position Euler Error')
 xlabel('Simulation Step')
-ylabel('error [m]')
+ylabel('Error [m]')
 grid on
 
 figure
 plot(err_vel_1_euler,'r','LineWidth',1.5)
-title('VDP velocity Euler error')
+title('VDP Velocity Euler Error')
 xlabel('Simulation Step')
-ylabel('error [m/s]')
+ylabel('Error [m/s]')
 grid on
 
 %%
@@ -66,22 +68,22 @@ scatter(sim.Y(:,1),sim.Y(:,2),'m','*','LineWidth',0.5)
 scatter(sim.R(:,1),sim.R(:,2),'b','o','LineWidth',0.5)
 legend('Euler','Koopman','Reference')
 grid on
-title('VDP scatter plot')
-xlabel('VDP position')
-ylabel('VDP velocity')
+title('VDP Scatter Plot')
+xlabel('VDP Position')
+ylabel('VDP Velocity')
 
 figure
 plot(err_pos_1_koopman,'r','LineWidth',1.5)
-title('VDP position Koopman error')
+title('VDP Position Koopman Error')
 xlabel('Simulation Step')
-ylabel('error [m]')
+ylabel('Error [m]')
 grid on
 
 figure
 plot(err_vel_1_koopman,'r','LineWidth',1.5)
-title('VDP velocity Koopman error')
+title('VDP Velocity Koopman Error')
 xlabel('Simulation Step')
-ylabel('error [m/s]')
+ylabel('Error [m/s]')
 grid on
 
 figure
